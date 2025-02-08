@@ -39,16 +39,15 @@ CREATE TABLE borrowed_books (
   FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
-
 p2
 INSERT INTO authors (author_name) VALUES ('Natalya');
 INSERT INTO authors (author_name) VALUES ('Tanya');
 
-INSERT INTO books (title, publication_year) VALUES ('Book 1', '1960');
-INSERT INTO books (title, publication_year) VALUES ('Book 2', '1970');
-
 INSERT INTO genres (genre_name) VALUES ('komedy');
 INSERT INTO genres (genre_name) VALUES ('fantazy');
+
+INSERT INTO books (title, publication_year, author_id, genre_id) VALUES ('Book 1', '1960', 1, 1);
+INSERT INTO books (title, publication_year, author_id, genre_id) VALUES ('Book 2', '1970', 2, 2);
 
 INSERT INTO users (username, email) VALUES ('Kate', 'test@gmail.com');
 INSERT INTO users (username, email) VALUES ('Andrey', 'test2@gmail.com');
